@@ -22,10 +22,14 @@ const Formulario = () => {
   //extraer los valores, destructuring
   const { mascota, propietario, fecha, hora, sintomas } = cita
 
+  //Cuando el usuario presiona el boton
+  const submitCita = e => {
+    e.preventDefault()
+  }
   return(
     <Fragment>
       <h1>Nueva Cita</h1>
-      <form>
+      <form onSubmit={submitCita}>
         <label>Nombre Mascota</label>
         <input
             type="text"
