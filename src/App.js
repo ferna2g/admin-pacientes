@@ -20,6 +20,9 @@ const eliminarCita = id => {
   guardarCita(nuevasCitas)
 }
 
+//funcion para validar mensajes
+const titulo = citas.length === 0 ? 'No hay Citas' :'Administra tus citas'
+
   return (
     <Fragment>
     <h1>Administrador de pacientes</h1>
@@ -31,7 +34,7 @@ const eliminarCita = id => {
             />
           </div>
           <div className="one-half column">
-            <h1>Administra tus citas</h1>
+            <h1>{titulo}</h1>
             {citas.map(cita => (
               <Cita
                 key={cita.id}
