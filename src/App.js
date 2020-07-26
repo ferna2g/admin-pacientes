@@ -11,7 +11,7 @@ if(!citasIniciales){
 }
 
 //arreglo de citas
-const [citas, guardarCitas] = useState([citasIniciales])
+const [citas, guardarCitas] = useState(citasIniciales)
 
 //useEffect para realizar ciertas operaciones cuando el state cambia
 useEffect( () => {
